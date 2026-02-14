@@ -4,7 +4,7 @@ resource "proxmox_virtual_environment_vm" "vm" {
   node_name = "madrid" # Deploy this to Madrid node
   clone {
     vm_id = 9000              # This is how we clone the template
-    source_node_name = "baires" # The node where the template currently resides
+    node_name = "baires" # The node where the template currently resides
     full = true
   }
   #template_vm_id = 9000  # The ID of the template we just created
