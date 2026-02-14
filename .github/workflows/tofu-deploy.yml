@@ -7,7 +7,7 @@ on:
 jobs:
   tofu:
     name: 'Tofu Apply'
-    runs-on: homelab  # <--- This targets your LXC
+    runs-on: self-hosted  # <--- This targets your LXC
     steps:
       - name: Checkout
         uses: actions/checkout@v4
