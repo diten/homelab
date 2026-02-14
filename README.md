@@ -164,3 +164,33 @@ To avoid manual configuration of every new service, we implemented two automatio
 - **MTU/MSS Clamping:** Routing between 2.5G and 1G interfaces often requires MSS clamping to prevent packet fragmentation.
 - **Hairpin NAT:** Internal testing requires a local `hosts` entry or a split-brain DNS since most ISP routers don't support NAT Loopback.
 - **Cloudflare-DDNS**: Remember to activate and check this component after initial deployment.
+
+**6\. Screenshots**
+
+Cluster View
+<img width="1918" height="834" alt="image" src="https://github.com/user-attachments/assets/cd59ce9d-0452-483c-a827-b938d8d19d69" />
+
+Baires Node View
+<img width="1914" height="846" alt="image" src="https://github.com/user-attachments/assets/b7f51497-c373-46a4-9042-56dc2d0082df" />
+
+Baires Network Interfaces Configuration
+<img width="1625" height="292" alt="image" src="https://github.com/user-attachments/assets/0378200b-680d-443d-9cc9-c9b5a0276cfb" />
+
+Baires Firewall Options Configuration
+<img width="750" height="543" alt="image" src="https://github.com/user-attachments/assets/215f07bc-21b6-41c7-a62f-5fac36085a72" />
+
+Traefik Firewall Options Configuration
+
+<img width="738" height="435" alt="image" src="https://github.com/user-attachments/assets/82532c57-4aa1-4f90-9a98-7d88b0396488" />
+
+Madrid Network Interfaces Configuration
+
+<img width="1623" height="316" alt="image" src="https://github.com/user-attachments/assets/d16501ce-1f19-4d7d-9849-c2c04bc7647c" />
+
+Speed Test between nodes
+<img width="1911" height="851" alt="image" src="https://github.com/user-attachments/assets/db4174ad-f025-46bf-aa3b-7a2e8bad5c15" />
+
+Traefik Dashboard
+<img width="1788" height="839" alt="image" src="https://github.com/user-attachments/assets/f9d5f6f6-aff4-4e3b-b066-d51e7ca8bdd2" />
+
+
