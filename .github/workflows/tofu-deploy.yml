@@ -1,0 +1,24 @@
+name: 'OpenTofu Proxmox Deploy'
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  tofu:
+    name: 'Tofu Apply'
+    runs-on: self-hosted  # <--- This targets your LXC
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: OpenTofu Init
+        run: tofu init
+
+      - name: OpenTofu Apply
+        run: tofu apply -auto-approve
+        env:
+          # Secrets are pulled from GitHub but used locally by the runner
+          TF_VAR_api_token_id: ${{ secrets.PROXMOX_TOKEN_ID }}
+          TF_VAR_api_token_secret: ${{ secrets.PROXMOX_TOKEN_SECRET }}
+          TF_VAR_ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
