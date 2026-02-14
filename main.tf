@@ -1,5 +1,5 @@
 resource "proxmox_virtual_machine" "test_vm" {
-  name        = "madrid-worker-01"
+  name        = "worker-01"
   description = "Managed by OpenTofu"
   target_node = "madrid" # Deploy this to Madrid node
   template_vm_id = 9000  # The ID of the template we just created
