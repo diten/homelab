@@ -135,6 +135,14 @@ To avoid manual configuration of every new service, we implemented two automatio
 1.  **Network Level:** `dnsmasq` on Baires provides DHCP and static leases to the `.18.x` network.
 2.  **Application Level:** The **Traefik Proxmox Plugin** monitors LXC metadata (Notes field).
 
+```
+traefik.enable=true
+traefik.http.routers.docmost.rule=Host(docmost.domain.net)
+traefik.http.routers.docmost.entrypoints=websecure
+traefik.http.services.docmost.loadbalancer.server.port=3000
+traefik.http.routers.docmost.tls=true
+```
+
 - **Traefik Proxmox Plugin Config:**
     
     ```
