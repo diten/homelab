@@ -1,4 +1,4 @@
-resource "proxmox_ve_vm" "test_vm" {
+resource "proxmox_virtual_environment_vm" "vm" {
   name        = "worker-01"
   description = "Managed by OpenTofu"
   node_name = "madrid" # Deploy this to Madrid node
