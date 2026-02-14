@@ -9,7 +9,7 @@ terraform {
 
 provider "proxmox" {
   # The internal IP of your Baires node
-  endpoint = "https://192.168.18.20"
+  endpoint = "https://192.168.18.20:8006"
   
   # This matches the environment variables you will set in GitHub Actions
   api_token = "${var.proxmox_token_id}=${var.proxmox_token_secret}"
