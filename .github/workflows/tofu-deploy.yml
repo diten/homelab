@@ -8,6 +8,8 @@ jobs:
   tofu:
     name: 'Tofu Apply'
     runs-on: self-hosted  # <--- This targets your LXC
+    environment: prod 
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
