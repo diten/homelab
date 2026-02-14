@@ -1,8 +1,11 @@
-resource "proxmox_virtual_machine" "test_vm" {
+resource "proxmox_ve_vm" "test_vm" {
   name        = "worker-01"
   description = "Managed by OpenTofu"
-  target_node = "madrid" # Deploy this to Madrid node
-  template_vm_id = 9000  # The ID of the template we just created
+  node_name = "madrid" # Deploy this to Madrid node
+  clone {
+    vm_id = 9000              # This is how we clone the template
+  }
+  #template_vm_id = 9000  # The ID of the template we just created
 
   cpu {
     cores = 2
