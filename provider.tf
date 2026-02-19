@@ -5,7 +5,13 @@ terraform {
       version = "0.66.1"
     }
   }
+
+  backend "local" {
+    path = "/opt/opentofu/state/homelab.tfstate"
+  }
+
 }
+
 
 provider "proxmox" {
   # The internal IP of your Baires node
