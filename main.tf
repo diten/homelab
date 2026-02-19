@@ -20,11 +20,21 @@ resource "proxmox_virtual_environment_vm" "vm" {
   network_device {
     bridge = "vmbr0"
   }
+  
+  serial_device {} 
+
+  vga {
+    type = "serial0"
+  }
 
   disk {
     datastore_id = "local-lvm" # Change to your Madrid storage name
-    interface    = "scsi0"
-    size         = 20
+    size         = "20G"
+    interface = "scsi0"
+  }
+
+  agent {
+    enabled = true
   }
 
   initialization {
