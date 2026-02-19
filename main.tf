@@ -38,7 +38,6 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   initialization {
-    user_data_file_id = "local:snippets/debian-console.yaml"
 
     ip_config {
       ipv4 {
