@@ -42,3 +42,11 @@ resource "proxmox_virtual_environment_vm" "vm" {
     }
   }
 }
+
+module "database_stack" {
+  source = "./services/databases/postgresql"
+  # Pass your variables down to the module
+  ssh_public_key = var.ssh_public_key
+  proxmox_token_id = var.proxmox_token_id
+  proxmox_token_secret = var.proxmox_token_secret
+}
