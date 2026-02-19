@@ -34,10 +34,12 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   agent {
-    enabled = true
+    enabled = false
   }
 
   initialization {
+    user_data_file_id = "local:snippets/debian-console.yaml"
+
     ip_config {
       ipv4 {
         address = "192.168.18.101/24"
