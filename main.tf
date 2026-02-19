@@ -29,7 +29,7 @@ resource "proxmox_virtual_environment_vm" "vm" {
 
   disk {
     datastore_id = "local-lvm" # Change to your Madrid storage name
-    size         = "20G"
+    size         = 20
     interface = "scsi0"
   }
 
