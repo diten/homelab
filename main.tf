@@ -20,7 +20,9 @@ resource "proxmox_virtual_environment_vm" "vm" {
     bridge = "vmbr0"
   }
   
-  serial_device {} 
+  serial_device {
+    device = "socket"
+  }
 
   vga {
     type = "serial0"
