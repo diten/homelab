@@ -7,7 +7,6 @@ resource "proxmox_virtual_environment_vm" "vm" {
     node_name = "baires" # The node where the template currently resides
     full = true
   }
-  #template_vm_id = 9000  # The ID of the template we just created
 
   cpu {
     cores = 2
@@ -38,7 +37,6 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   initialization {
-    user_data_file_id = "local:snippets/debian-console.yaml"
 
     ip_config {
       ipv4 {
