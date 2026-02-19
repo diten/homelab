@@ -28,7 +28,8 @@ resource "proxmox_virtual_environment_container" "postgres_db" {
   }
 
   mount_point {
-    volume = "bulk:8" 
+    volume = "bulk"
+    size = "8G"
     path   = "/"
   }
 
